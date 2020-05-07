@@ -13,7 +13,8 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault() // this is used to preventing refresh of the page for everytime
 
     const location = search.value
-    const url = 'http://localhost:3000/weather?address=' + location
+    const url = 'http://localhost:3000/weather?address=' + location // this is to run the app in localhost
+    const url = '/weather?address=' + location // this is to run the app in public domain
     message1.textContent = 'loading...'
     message2.textContent = ''
     fetch(url).then((response) => {
